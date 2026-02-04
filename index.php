@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dateinam Guesthouse - Your Home Away From Home</title>
-    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/style.css?t=<?php echo time(); ?>" />
     <link rel="stylesheet" href="assets/styles/footer.css" />
     <link rel="stylesheet" href="assets/styles/about.css" />
     <link
@@ -105,7 +105,7 @@
       </div>
     </div>
 
-    <section class="section" id="policies" style="background: #f8f9fc">
+    <!-- <section class="section" id="policies" style="background: #f8f9fc">
       <div class="container" style="max-width: 1100px; margin: auto">
         <h2 class="section-title">Our Guest Policies</h2>
         <p class="section-subtitle" style="margin-bottom: 3rem">
@@ -119,7 +119,6 @@
             gap: 2rem;
           "
         >
-          <!-- Policy Card -->
           <div
             class="policy-card"
             style="
@@ -211,7 +210,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="section" id="booking">
       <div class="container">
@@ -427,6 +426,9 @@
       </div>
     </section>
 
+    <!-- Floating Book Now Button -->
+    <a href="#booking" class="floating-book-btn">Book Now</a>
+
     <?php include 'includes/footer.php'; ?>
 
     <!-- Modals -->
@@ -435,6 +437,6 @@
     </div>
 
     <script src="assets/rooms.js"></script>
-    <script src="assets/main.js"></script>
+    <script src="assets/main.js?t=<?php echo time(); ?>"></script>
   </body>
 </html>
