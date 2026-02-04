@@ -114,12 +114,51 @@
             background: #f9f9f9;
             border-left: 4px solid #007bff;
         }
+
+        .room-features{
+            display: grid;
+        }
+
+        .room-features h3 {
+            font-size: 1.3em;
+            color: #333;
+        }
+
+        .room-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .room-features li {
+            color: #555;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+        }
+
+       
+
+        .room-features li::before {
+            content: "✓";
+            color: #007bff;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.1em;
+        }
         
         .description {
             margin-top: 30px;
             line-height: 1.6;
             color: #555;
         }
+
+        .description h3 {
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
         .other-rooms{
             padding: 0 1.5rem;
         }
@@ -279,6 +318,19 @@
                 font-size: 0.9em;
             }
 
+            .room-features h3 {
+                font-size: 1.1em;
+            }
+
+            .room-features li {
+                font-size: 0.9em;
+                padding: 6px 0;
+            }
+
+            .description h3 {
+                font-size: 1.1em;
+            }
+
             .other-rooms h2 {
                 font-size: 1.4em;
             }
@@ -331,10 +383,17 @@
                             <strong>Size:</strong> <span id="roomSize"></span>
                         </div>
                     </div>
-                    <div class="description">
+                     <div class="description">
                         <h3>Description</h3>
                         <p id="roomDescription"></p>
                     </div>
+                    <div class="room-features">
+                        <h3>Features</h3>
+                        <ul id="roomFeatures">
+                            <!-- Features will be loaded here -->
+                        </ul>
+                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -382,6 +441,17 @@
                 document.getElementById('roomBeds').textContent = room.beds;
                 document.getElementById('roomSize').textContent = room.size;
                 document.getElementById('roomDescription').textContent = room.description;
+
+                // Populate features
+                const featuresContainer = document.getElementById('roomFeatures');
+                featuresContainer.innerHTML = '';
+                if (room.features && room.features.length > 0) {
+                    room.features.forEach(feature => {
+                        const li = document.createElement('li');
+                        li.textContent = feature;
+                        featuresContainer.appendChild(li);
+                    });
+                }
             }
         }
 
