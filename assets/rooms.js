@@ -1,0 +1,26 @@
+const rooms = [
+    {
+        id: "standard",
+        name: "Standard Room",
+        price: 1000,
+        features: ["Queen Size Bed", "Garden View", "Modern Bathroom", "Free WiFi"],
+        image: "assets/images/DSC07179.jpg",
+        gallery: ["assets/images/DSC07179.jpg", "assets/images/DSC07214.jpg", "assets/images/DSC07237.jpg", "assets/images/DSC07198.jpg", "assets/images/DSC07190.jpg", "assets/images/DSC07218.jpg"],
+        description: "Comfortable room with essential amenities for a relaxing stay.",
+        beds: 1,
+        size: "19 sqm",
+        guests: 2,
+    },
+    {
+        id: "double",
+        name: "Double Bed Room",
+        price: 1500,
+        features: ["Double Bed", "Spacious Room", "Modern Bathroom", "Free WiFi", "TV"],
+        image: "assets/images/DSC07197.jpg",
+        gallery: ["assets/images/DSC07197.jpg", "assets/images/DSC07222.jpg", "assets/images/DSC07218.jpg", "assets/images/DSC07214.jpg", "assets/images/DSC07198.jpg", "assets/images/DSC07217.jpg"],
+        description: "Spacious room perfect for couples or friends traveling together.",
+        beds: 1,
+        size: "25 sqm",
+        guests: 2,
+    },
+];
